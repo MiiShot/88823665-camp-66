@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML - FORM</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Workshop #HTML - FORM</h1>
+        <form>
+            <table>
+                <tr>
+                    <td scope="row">ชื่อ</td>
+                    <td>
+                        <input type="text" id="firstname" name="fname">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">สกุล</td>
+                    <td>
+                        <input type="text" id="surname" name="Surname">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">วัน/เดือน/ปีเกิด</td>
+                    <td>
+                        <input type="date" id="date" name="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">อายุ</td>
+                    <td>
+                        <input type="number" id="age" name="age">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">เพศ</td>
+                    <td>
+                        <input type="radio" id="Male" name="Gender" value="Man">
+                        <label for="Male">ชาย</label>
+                        <input type="radio" id="Female" name="Gender" value="Girl">
+                        <label for="Female">หญิง</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">รูป</td>
+                    <td>
+                        <input type="file" id="Picture" name="Picture">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">ที่อยู่</td>
+                    <td>
+                        <textarea rows="6" cols="25" id="Address" name="Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">สีที่ชอบ</td>
+                    <td>
+                        <select id="colors" name="colors" size="1">
+                            <option value="red">สีแดง</option>
+                            <option value="yellow">สีเหลือง</option>
+                            <option value="blue">สีน้ำเงิน</option>
+                            <option value="green">สีเขียว</option>
+                            <option value="purple">สีม่วง</option>
+                            <option value="soft_blue">สีฟ้า</option>
+                            <option value="pink">สีชมพู</option>
+                            <option value="orange">สีส้ม</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">แนวเพลงที่ชอบ</td>
+                    <td>
+                        <input type="radio" id="forlife" name="Song" value="for_life">
+                        <label for="for_life">เพื่อชีวิต</label>
+                        <input type="radio" id="looktoong" name="Song" value="looktoong">
+                        <label for="looktoong">ลูกทุ่ง</label>
+                        <input type="radio" id="other" name="Song" value="other">
+                        <label for="other">อื่นๆ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <input type="checkbox" id="accept" name="accept" value="accept">
+                        <label for="accept">ยินยอมให้เก็บข้อมูล</label>
+                        <br><br>
+                    </td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <input type="reset" value="Reset" >
+                        </td>
+
+                        <td>
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>
