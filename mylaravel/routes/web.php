@@ -6,6 +6,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 
+Route::get('/myview', function () {
+    return view('myview');
+});
 
 Route::get('/', function () {
     return view('layouts.default');
