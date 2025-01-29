@@ -31,3 +31,5 @@ Route::get('/multiplication',
 
 Route::post('/multiplication',
     [MyController::class, 'multiplication']);
+
+Auth::routes();
