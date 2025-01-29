@@ -25,7 +25,3 @@ Route::post('/multiplication', [MyController::class, 'multiplication']);
 
 // ระบบ Auth ของ Laravel (login, logout, register)
 Auth::routes();
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
