@@ -4,23 +4,22 @@
     <div class="register-page">
         <div class="register-box">
             <div class="register-logo">
-                <a href=""><b>Edit</b>User</a>
+                <a href="../index2.html"><b>Admin</b>LTE</a>
             </div>
             <!-- /.register-logo -->
             <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="register-box-msg">Edit User</p>
+                    <p class="register-box-msg">Edit information a membership</p>
                     <form action="{{ url('/user') }}" method="post">
                         @csrf
                         @method('put')
-                        <input type="hidden" name="id"
-                        value="{{ $user->id }}" >
+                        <input type="hidden" name="id" value="{{ $user->id}}">
                         <div class="input-group mb-3">
-                            <input type="text" value="{{ $user->name }}" name="name" class="form-control" placeholder="Full Name" />
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" value="{{ $user->name}}"/>
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="email" value="{{ $user->email }}" name="email" class="form-control" placeholder="Email" />
+                            <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $user->email}}"/>
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
                         </div>
                         <div class="input-group mb-3">
@@ -30,19 +29,15 @@
                         <!--begin::Row-->
                         <div class="row">
                             <!-- /.col -->
-                            <div class="col-4">
+                            <div class="col-12">
                                 <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="submit" class="btn btn-primary"> Change </button>
                                 </div>
                             </div>
                             <!-- /.col -->
                         </div>
                         <!--end::Row-->
                     </form>
-                    <div class="social-auth-links text-center mb-3 d-grid gap-2">
-
-                    <!-- /.social-auth-links -->
-
                 </div>
                 <!-- /.register-card-body -->
             </div>

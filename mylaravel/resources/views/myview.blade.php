@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>ตารางสูตรคูณ</title>
-</head>
-<body>
-    <div class="container mt-5">
-        <h1 class="text-center">ตารางสูตรคูณ</h1>
-        <form action="{{ url('multiplication') }}" method="POST" class="mb-4">
-            @csrf
-            <div class="mb-3">
-                <label for="number" class="form-label">แม่สูตรคูณ</label>
-                <input type="number" id="number" name="number" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">แสดงสูตรคูณ</button>
-        </form>
-
-        @isset($table)
-            <h2>สูตรคูณแม่ {{ $number }}</h2>
-            <table class="table table-bordered">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <form action="{{ url('mycontroller') }}" method="post">
+                @csrf
+                <div class="mb-3">
+                    <label for="num" class="form-label">แม่สูตรคูณ</label>
+                    <input type="number" class="form-control" id="num" name="num">
+                </div>
+                <button type="submit" class="btn btn-primary">แสดง</button>
+            </form>
+            <table class="table table-bordered mt-3">
                 <thead>
                     <tr>
-                        <th>คูณ</th>
-                        <th>เท่ากับ</th>
+                        <th>ตัวคูณ</th>
+                        <th>ผลลัพธ์</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($table as $key => $value)
-                        <tr>
-                            <td>{{ $key }}</td>
-                            <td>{{ $value }}</td>
-                        </tr>
-                    @endforeach
+                    <?php
+                        if(isset($_POST['num'])){
+                            $num = $_POST['num'];
+                            for($i=1; $i<=12; $i++){
+                                $result = $num*$i;
+                                echo "<tr>";
+                                echo "<td>$num x $i</td>";
+                                echo "<td>$result</td>";
+                                echo "</tr>";
+                            }
+                        }
+                    ?>
                 </tbody>
             </table>
-        @endisset
-    </div>
-</body>
+        </div>
+    </body>
 </html>

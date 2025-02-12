@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class homeController extends Controller
 {
-    //
-    function index() {
+    function House(){
         return view('home');
     }
 }

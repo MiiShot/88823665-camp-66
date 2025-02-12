@@ -6,20 +6,12 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    public function back()
-    {
-        return view('myview');
+    private function myprivate(){
+        return 1;
     }
-
-    public function multiplication(Request $request)
-    {
-        $number = $request->input('number');
-        $table = [];
-
-        for ($i = 1; $i <= 12; $i++) {
-            $table[$i] = $number * $i;
-        }
-
-        return view('myview', compact('number', 'table'));
+    function myfunction(Request $req ,$varl=""){
+        $data['myinput'] = $req->input('myinput');
+        $data['myvalue'] = $varl;
+        return view('myview', $data);
     }
 }
